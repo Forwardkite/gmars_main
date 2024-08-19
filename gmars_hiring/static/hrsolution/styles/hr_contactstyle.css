@@ -1,0 +1,260 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+/* First Section */
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    padding: 2em 0 2em 0;
+    margin: 0;
+}
+.logo{
+    padding: 0 0 0 2em;
+}
+.logo > a > img{
+    width: 110%;
+}
+.navbar-desktop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1% 1% 1% 25%;
+    font-weight:bolder;
+}
+.navbar-desktop > ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+.navbar-desktop > ul > li{
+    font-size: larger;
+    padding: 0.7em 2em 0 2em;
+}
+.navbar-desktop > ul > li > a{
+    color: black;
+}
+.navbar-desktop > ul > li > a:hover{
+    color: #1158E1;
+}
+.login{
+    display: flex;
+    align-items: center;
+    font-size: larger;
+    padding: 0em 2em 0em 2em;
+    margin-left: 2em;
+    background-color: blue;
+    text-decoration: none;
+    color: white;
+}
+.login:hover{
+    background-color: rgb(0, 0, 100);
+    color: white;
+}
+.navbar-mobile{
+    display: none;
+}
+/* Contact - Secound Section */
+.secound-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    background: linear-gradient( 320deg, #5885D6, #3E3636);
+    padding: 2em 4em;
+    color: white;
+}
+.form-contact{
+    width: 40%;
+    border-radius: 2em;
+    margin: 10em 6em 2em 10%;
+    padding: 2em 4em 4em 4em;
+    border: 2px solid white;
+}
+.form-contact-sec{
+    margin: 2em 0 0 0;
+}
+/* footer */
+footer{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 2em;
+}
+footer > hr{
+    color: white;
+    background-color: white;
+    width: 75%;
+    height: 1.5px;
+}
+footer > p{
+    font-size: 1.2em;
+    color: grey;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 0 0 4em 0;
+}
+.footeremail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 15em 0 0em;
+}
+.footerhead{
+    padding: 0 0 0 1.3em;
+}
+.footerhead > h4{
+    font-size: 2.5em;
+    font-weight: bold;
+    padding: 0 0 0.2em 0;
+}
+.footerhead > p{
+    font-size: 1.2em;
+    padding: 0 0 0.2em 0;
+}
+.emailaddress-input{
+    display: flex;
+    flex-direction: row;
+}
+.footer-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    padding: 1em 5em 0 0;
+}
+.footer-pages > ul{
+    padding: 1em 0 0 0;
+}
+.footer-pages > ul > li, a{
+    padding: 0.6em 0;
+}
+.footer-pages > ul > li > a{
+    font-size: 1.2em;
+    color: white;
+}
+.footer-contactus{
+    padding: 0 0 0 7em;
+}
+.footer-contactus > ul{
+    padding: 1em 0 0 0;
+}
+.footer-contactus > ul > li, a{
+    padding: 0.6em 0;
+}
+.footer-contactus > ul > li > a{
+    font-size: 1.2em;
+    color: white;
+}
+.footer-social{
+    padding: 0 0 0 5em;
+}
+.footer-social > svg{
+    margin: 0 0 0 2em;
+}
+/* Third section */
+.third-service > a > img{
+    width: 100%;
+}
+@media only screen and (max-width: 740px) {
+    .first-part{
+        background-size: fit;
+        height: 40vh;
+    }
+    .navbar{
+        padding: 0;
+    }
+    .logo{
+        padding: 0.5em 0 0 0;
+        margin: 0;
+    }
+    .logo > a > img{
+        width: 110px;
+    }
+    .navbar-desktop{
+        display: none;
+    }
+    .navbar-mobile{
+        display: block;
+    }
+    .navbar-mobile{
+        padding: 4% 2% 0.5% 0.5%;
+    }
+    .mobile-links > ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+    }
+    .mobile-links > ul > li{
+        padding: 2em 0 2em 0;
+    }
+    .mobile-links > ul > li > a{
+        text-decoration: none;
+        color: black;
+    }
+    .mobile-links > ul > li > a:hover{
+        color: #1158E1;
+        font-weight: bold;
+    }
+    /* Contact us - secound section */
+    .secound-section{
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 1em;
+    }
+    .form-contact{
+        margin: 2em 0em;
+        width: 100%;
+    }
+    .form-side > h5{
+        font-size: 0.9em;
+    }
+    /* Footer */
+    .footer{
+        padding: 0.5em;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footerhead > p{
+        font-size: 0.9em;
+    }
+    .footeremail, .footer-links, .footer-social{
+        padding: 0;
+        margin: 0;
+    }
+    .footer-links{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 2em 0 0 0;
+    }
+    .footer-contactus{
+        padding: 2em 0 0 0;
+    }
+    footer > p{
+        font-size: 0.9em;
+    }
+}

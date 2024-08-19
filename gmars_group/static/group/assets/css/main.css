@@ -1,0 +1,288 @@
+/***********************************
+      IMPORT DEFAULT STYLES
+************************************/
+@import url("../../packages/default.css");
+
+
+/***********************************
+            DEFAULT
+************************************/
+body{
+    background-color:var(--dark);
+    color:var(--white);
+}
+
+a, p, .btn{
+    font-size:15px;
+}
+
+ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+
+.btn{
+    padding:1rem;
+}
+
+em{
+    color:var(--primary);
+    font-style:normal;
+}
+
+.title, .sub_title{
+    letter-spacing:2px;
+}
+
+.title, .sub_title, strong, b{
+    font-weight:300;
+}
+
+.title_header{
+    opacity:0.7;
+    margin:2vh auto;
+}
+
+.title_header b{
+    font-weight:400;
+}
+
+.logo{
+    align-items:center;
+}
+
+.logo em{
+    font-family:var(--styled_font);
+}
+
+.btn_1{
+    color:var(--primary);
+    padding:0;
+    padding-right:1rem;
+}
+
+.btn_1:before, .btn_1:after{
+    content:"";
+    position:absolute;
+}
+
+.btn_1:before{
+    left:0;
+    bottom:0;
+    width:100%;
+    height:1px;
+    background-color:var(--primary);
+}
+
+.btn_1:after{
+    content:"\f062";
+    font-family:"FontAwesome";
+    right:-0.2rem;
+    top:50%;
+    transform:translate(0, -50%) rotate(30deg);
+    transition:0.5s;
+    color:var(--primary);
+}
+
+.btn_1:hover{
+    color:var(--white);
+}
+
+.btn_1:hover:after{
+    transform:translate(0, -50%) rotate(90deg);
+}
+
+.btn_2{
+    background-color:var(--dark);
+    color:var(--primary);
+    padding:0.6rem 4rem;
+    padding-left:1.5rem;
+    border-radius:40px;
+}
+
+.btn_2:after{
+    content:"\f062";
+    font-family:"FontAwesome";
+    width:35px;
+    height:35px;
+    display:flex;
+    align-items:Center;
+    justify-content:center;
+    background-color:var(--primary);
+    color:var(--dark);
+    border-radius:50%;
+    right:0.1rem;
+    top:50%;
+    position:absolute;
+    transform:translate(-0.2rem, -50%) rotate(30deg);
+    transition:0.5s;
+}
+
+.btn_2:hover{
+    color:var(--white);
+}
+
+.btn_2:hover:after{
+    transform:translate(-0.2rem, -50%) rotate(90deg);
+}
+
+@media (max-width:920px){
+    a, p, .btn{
+        font-size:12px;
+    }
+    
+    .btn_2:after{
+        transform:translate(-0.1rem, -50%) rotate(90deg);
+    }
+    
+    .btn_2:hover:after{
+        transform:translate(-0.1rem, -50%) rotate(90deg);
+    }
+}
+
+
+
+/***********************************
+                NAV
+************************************/
+nav{
+    align-items:center;
+    justify-content:space-between;
+    padding:1rem 3rem;
+}
+
+.ham{
+    position:relative;
+    width:50px;
+    height:20px;
+    z-index:99;
+    cursor:default;
+    opacity:0.6;
+}
+
+.ham:hover{
+    opacity:1;
+}
+
+.ham span{
+    position:absolute;
+    width:100%;
+    height:2px;
+    top:50%;
+    left:50%;
+    border-radius:10px;
+    background-color:var(--white);
+    transform:translate(-50%, -50%);
+    transition:0.5s;
+}
+
+.ham:before, .ham:after{
+    transition:0.5s;
+}
+
+.ham:before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:50%;
+    height:2px;
+    background-color:var(--white);
+}
+
+.ham:after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    right:0;
+    width:50%;
+    height:2px;
+    background-color:var(--white);
+}
+
+.ham_animator{
+    opacity:1;
+}
+
+.ham_animator:after, .ham_animator:before{
+    width:100%;
+}
+
+.ham_animator span{
+    width:10px;
+    height:10px;
+    background-color:var(--primary);
+    animation:5s move-in infinite linear;
+}
+
+.ham_animator span:after{
+    content:"";
+    position:absolute;
+    bottom:0;
+    left:50%;
+    transform:translate(-50%, 0);
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background-color:var(--dark);
+}
+
+@media (max-width:920px){
+    nav{
+        padding:1rem;
+    }
+    
+    nav .btn{
+        display:none;
+    }
+    
+    nav .ham{
+        order:1;
+        width:40px;
+    }
+    
+    nav .logo{
+        order:2;
+    }
+}
+
+
+/***********************************
+               MENU
+************************************/
+menu{
+    margin:0;
+    padding:0;
+    position:fixed;
+    right:-100%;
+    overflow:hidden !important;
+    top:0;
+    width:400px;
+    height:100vh;
+    background-color:var(--dark);
+    z-index:99;
+    transition:0.5s;
+}
+
+@media (max-width:920px){
+    menu{
+        width:70vw;
+    }
+}
+
+
+
+
+/***********************************
+            ADDITIONAL
+************************************/
+.overlay{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100vw;
+    height:100%;
+    background-color:rgba(1,1,1,0.6);
+    z-index:9;
+}

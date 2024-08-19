@@ -1,0 +1,315 @@
+*{
+    font-family: "El Messiri", sans-serif;
+}
+body{
+    overflow-x: hidden;
+}
+:root{
+    --h1size: 4em;
+    --psize: 1.5em;
+    --h1mobile: 2em;
+    --pmobile: 0.7;
+}
+/* Button */
+.button_travelhub{
+    background-color: #5ec0de;
+    width: fit-content;
+    padding: 0.5em 1.5em;
+    border-radius: 2em;
+    font-size: 1.5em;
+    color: black;
+}
+/* First Section */
+.firstsection-travelhub{
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mobile-nav{
+    display: none;
+}
+.menu-desktop{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.innermenu-desktop{
+    min-width: 50%;
+    margin: 2% 0;
+    padding: 0.5% 0;
+    border: 2px solid black;
+    border-radius: 2em;
+}
+.innermenu-desktop > ul{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%;
+}
+.innermenu-desktop > ul > li{
+    list-style: none;
+}
+.innermenu-desktop > ul > li > a{
+    text-decoration: none;
+    color: black;
+}
+.innermenu-desktop > ul > li > a :hover{
+    color: white;
+}
+.maincontent-travelhub{
+    padding: 10% 10%;
+}
+.maincontent-travelhub > h1{
+    font-size: var(--h1size);
+}
+.maincontent-travelhub > p{
+    font-size: var(--psize);
+}
+.maincontent-travelhub > a{
+    text-decoration: none;
+    color: white;
+}
+/* Form */
+.fifth-section{
+    color: white;
+    padding: 5em 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 5%; 
+    background: linear-gradient( 220deg, rgb(0, 0, 0), #3e3e3e);
+}
+.fifth-sideimg{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.fifth-sideimg >img{
+    border-radius: 1.5em;
+}
+.fifth-sideimg > ul > li{
+    list-style: none;
+    padding: 0.5em 0;
+}
+.fifth-sideimg > ul > li > a{
+    text-decoration: none;
+    color: white;
+    font-size: 1.5em;
+}
+.fifth-formsec{
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+.form-div-eduhub{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form-div-eduhub > input, select{
+    background-color: black;
+    color: white;
+    padding: 1em 1em;
+    border-radius: 0.5em;
+    border: 2px solid #C8C469;
+    margin: 0.5em 0;
+}
+.form-div-eduhub > input:hover{
+    border: 2.5px solid #ffe1cb;
+}
+.form-div-eduhub-last{
+    margin: 0.5em 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2%;
+}
+.form-div-eduhub-last > input{
+    background-color: black;
+    color: white;
+    padding: 2em 1em;
+    border-radius: 0.5em;
+    border: 2px solid #C8C469;
+    flex-grow: 1;
+}
+.form-div-eduhub-last > input:hover{
+    border: 2.5px solid #ffe1cb;
+}
+.form-div-eduhub-last > button{
+    background-color: black;
+    color: white;
+    border-radius: 0.5em;
+    border: 2px solid white;
+}
+.form-div-eduhub-last > button:hover{
+    border: 2.5px solid #ffe1cb;
+}
+/* footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+}
+.footer-global{
+    padding: 5em 2em;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 2;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+}
+.logo-section{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+.logo-section > p{
+    width: fit-content;
+    font-size: 1.2em;
+    margin: 1em 0;
+}
+.icons-socialmedia{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+.aboutus-footer > ul > li{
+    list-style: none;
+    padding: 0.5em 0;
+    font-size: 1.2em;
+}
+.aboutus-footer > ul > li > a{
+    text-decoration: none;
+    color: white;
+}
+.contactus-footer > ul > li{
+    width: fit-content;
+    list-style: none;
+    padding: 0.5em 0;
+    font-size: 1.2em;
+}
+.contactus-footer > ul > li > a{
+    text-decoration: none;
+    color: white;
+}
+.aboutus-footer > ul {
+    width: 150%;
+    padding: 0;
+}
+.contactus-footer > ul{
+    width: 150%;
+    padding: 0;
+}
+.newsletter-footer{
+    padding: 0.5em 0;
+}
+.newsletter-footer > p{
+    font-size: 1.2em;
+    margin: 0 0 0.5em 0;
+}
+.newsletter-footer > form > input{
+    background-color: black;
+    color: white;
+    padding: 1em 2em;
+    border-radius: 0.5em;
+    border: 2px solid #D05700;
+}
+.footer-end{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer-end > hr{
+    width: 90%;
+}
+.footer-end > p{
+    padding: 1.5em 0;
+    font-size: 1.2em;
+}
+.menu-link-button-edu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menu-link-button-edu > div{
+    padding: 3em 0;
+}
+
+@media only screen and (max-width: 900px){
+    .button_travelhub{
+        font-size: 1.1em;
+    }
+    /* First Section */
+    .menu-desktop{
+        display: none;
+    }
+    .mobile-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        justify-content: end;
+        padding: 0em 1em;
+    }
+    .mobile-navs > div > a{
+        text-decoration: none;
+        font-size: 2em;
+        color: black;
+    }
+    .maincontent-travelhub > h1{
+        font-size: var(--h1mobile);
+    }
+    .maincontent-travelhub > p{
+        font-size: var(--pmobile);
+    }
+    .fifth-sideimg{
+        display: none;
+    }
+
+    /* Footer */
+    .footer-global{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .logo-section > p{
+        width: 100%;
+    }
+    .aboutus-footer > ul{
+        padding: 0 0 0 0.2em;
+    }
+    .contactus-footer{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: start;
+    }
+    .contactus-footer > ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0 0 0;
+    }
+    .newsletter-footer{
+        padding: 2em 0 0 0;
+    }
+}

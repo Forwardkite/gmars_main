@@ -1,0 +1,114 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "/hrsolution/images/favicon/apple-touch-icon.png" %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "/hrsolution/images/favicon/favicon-32x32.png" %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "/hrsolution/images/favicon/favicon-16x16.png" %}">
+    <link rel="manifest" href="{% static "/hrsolution/images/favicon/site.webmanifest" %}">
+    <!-- Title -->
+    <title>Jobs Vacancies - Hiring Solution</title>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- style -->
+    <link rel="stylesheet" href="{% static "/hrsolution/styles/hr_jobs.css" %}">
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="secound-part">
+        <h1>Job Vacancies</h1>
+        <p>Find your way</p>
+        <div class="jobvaccancy-section">
+            <div class="job-containers">
+                {% for job in jobs %}
+                    <div class="each-job-container">
+                        <h2>{{job.job_title}}</h2>
+                        <p>
+                            {{job.job_details}}
+                        </p>
+                        <h5>{{job.job_industry}} | {{job.job_country}}</h5>
+                        <div>
+                            <button type="button" class="btn button-each-job-container" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+                                Apply
+                            </button>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- Button trigger modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Let's Know You</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form name="submit-to-google-sheet">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input name="name" type="text" aria-label="full name" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Phone</label>
+                            <input name="phone" type="tel" id="phoneNumber" aria-label="phone number" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleFormControlTextarea1" class="form-label">Personal Details</label>
+                            <textarea name="details" class="form-control" rows="3"></textarea>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzdjC9zEekmN4jQGgrn-_8HmXMhpT8zZkfHhYOLaYSs-XVRw0fQvdzSb8LOZ-mxppRS/exec';
+        const form = document.forms['submit-to-google-sheet'];
+
+        form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+            console.log('Success!', response);
+            // Reload the page after successful data send
+            location.reload();
+            })
+            .catch(error => console.error('Error!', error.message));
+        });
+        // Email Subscription
+        const scriptURLSubs = 'https://script.google.com/macros/s/AKfycbwuIWN2WdHGsj1CSkz33QCWnfLYRPgU9alpn9B6PrONVdgsYEUZmFnwhsZDlv6t3Mv42A/exec';
+        const formSubs = document.forms['submit-to-google-sheet-email'];
+
+        formSubs.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURLSubs, { method: 'POST', body: new FormData(formSubs) })
+            .then(response => {
+            console.log('Success!', response);
+            // Reload the page after successful data send
+            window.location.reload();
+            })
+            .catch(error => console.error('Error!', error.message));
+        });
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

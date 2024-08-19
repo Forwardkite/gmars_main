@@ -1,0 +1,68 @@
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+
+/* Secound Section */
+.secound-part{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 5% 2.5%;
+}
+.secound-part > h1{
+    font-size: 5em;
+    font-weight: bolder;
+}
+.secound-part > p{
+    font-size: 1.5em;
+    color: #1158E1;
+}
+/* job section */
+
+.job-containers{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 2em;
+}
+.each-job-container{
+    padding: 2em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20em;
+    height: 26em;
+    padding-top: 2.5em;
+    color: white;
+    background-color: #5885D6;
+    border-radius: 2em;
+}
+.each-job-container > h2{
+    font-weight: bold;
+}
+.last-job-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 20em;
+    height: 26em;
+    color: white;
+    background-color: #5885D6;
+    border-radius: 2em;
+}
+.button-each-job-container{
+    display: flex;
+    color: white;
+    background-color: #1158E1;
+    border-radius: 2em;
+    padding: 1em 4em;
+    width: fit-content;
+}

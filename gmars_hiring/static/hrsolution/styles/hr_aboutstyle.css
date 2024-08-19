@@ -1,0 +1,363 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    padding: 2em 0 2em 0;
+    margin: 0;
+}
+.logo{
+    padding: 0 0 0 2em;
+}
+.logo > a > img{
+    width: 110%;
+}
+.navbar-desktop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1% 1% 1% 25%;
+    font-weight:bolder;
+}
+.navbar-desktop > ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+.navbar-desktop > ul > li{
+    font-size: larger;
+    padding: 0.7em 2em 0 2em;
+}
+.navbar-desktop > ul > li > a{
+    color: black;
+}
+.navbar-desktop > ul > li > a:hover{
+    color: #1158E1;
+}
+.login{
+    display: flex;
+    align-items: center;
+    font-size: larger;
+    padding: 0em 2em 0em 2em;
+    margin-left: 2em;
+    background-color: blue;
+    text-decoration: none;
+    color: white;
+}
+.login:hover{
+    background-color: rgb(0, 0, 100);
+    color: white;
+}
+.navbar-mobile{
+    display: none;
+}
+.website-description{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 7em 0 0 0;
+}
+.website-description > h4{
+    margin: 0;
+}
+.website-description > h1{
+    font-size: 2.5em;
+    padding: 0 0 0.2em 0;
+    font-weight: 600;
+}
+/* Secound Section About Page */
+.secoundsection-about{
+    padding: 5em 10em;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+}
+.about-company{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+.about-company > h1{
+    font-size: 2em;
+}
+.about-company > p{
+    font-size: 1.1em;
+    width: fit-content;
+}
+.about-head{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.about-head > hr{
+    width: 70%;
+    height: 0.2em;
+    background-color: #002f8d;
+    color: #002f8d;
+    border-color: #002f8d;
+    padding: 0;
+    margin: 0.5em 0 2em 0;
+}
+.about-company-img{
+    padding: 0 0 0 5%;
+}
+.about-company-img > img{
+    height: 17em;
+}
+/* Third Section */
+.about-thirdsection{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: center;
+    flex-wrap: nowrap;
+    gap: 10%;
+    background: linear-gradient( 300deg, rgb(54, 106, 218), #C6C9D0);
+    padding: 2em;
+}
+.ourvision{
+    padding: 2em 0em 2em 0;
+}
+.ourvision > p{
+    color: white;
+    padding: 0 0 2em 0;
+    font-size: 1.1em;
+    width: 100%;
+}
+/* About Us - Fourth Section */
+.about-fourthsection{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 4em;
+    margin: 3em 0em;
+}
+.about-fourthsection > h1{
+    color: white;
+}
+.about-button{
+    color: white;
+    background-color: #1158E1;
+    padding: 1em 1.5em;
+    border-radius: 0.5em;
+}
+
+/* footer */
+footer{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 2em;
+}
+footer > hr{
+    color: white;
+    background-color: white;
+    width: 75%;
+    height: 1.5px;
+}
+footer > p{
+    font-size: 1.2em;
+    color: grey;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 0 0 4em 0;
+}
+.footeremail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 15em 0 0em;
+}
+.footerhead{
+    padding: 0 0 0 1.3em;
+}
+.footerhead > h4{
+    font-size: 2.5em;
+    font-weight: bold;
+    padding: 0 0 0.2em 0;
+}
+.footerhead > p{
+    font-size: 1.2em;
+    padding: 0 0 0.2em 0;
+}
+.emailaddress-input{
+    display: flex;
+    flex-direction: row;
+}
+.footer-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    padding: 1em 5em 0 0;
+}
+.footer-pages > ul{
+    padding: 1em 0 0 0;
+}
+.footer-pages > ul > li, a{
+    padding: 0.6em 0;
+}
+.footer-pages > ul > li > a{
+    font-size: 1.2em;
+    color: white;
+}
+.footer-contactus{
+    padding: 0 0 0 7em;
+}
+.footer-contactus > ul{
+    padding: 1em 0 0 0;
+}
+.footer-contactus > ul > li, a{
+    padding: 0.6em 0;
+}
+.footer-contactus > ul > li > a{
+    font-size: 1.2em;
+    color: white;
+}
+.footer-social{
+    padding: 0 0 0 5em;
+}
+.footer-social > svg{
+    margin: 0 0 0 2em;
+}
+@media only screen and (max-width: 740px) {
+    .first-part{
+        background-size: fit;
+        height: auto;
+    }
+    .navbar{
+        padding: 0;
+    }
+    .logo{
+        padding: 0 0 0 0;
+        margin: 0;
+    }
+    .logo > a > img{
+        width: 110px;
+    }
+    .navbar-desktop{
+        display: none;
+    }
+    .navbar-mobile{
+        display: block;
+    }
+    .navbar-mobile{
+        padding: 4% 2% 0.5% 0.5%;
+    }
+    .mobile-links > ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+    }
+    .mobile-links > ul > li{
+        padding: 2em 0 2em 0;
+    }
+    .mobile-links > ul > li > a{
+        text-decoration: none;
+        color: black;
+    }
+    .mobile-links > ul > li > a:hover{
+        color: #1158E1;
+        font-weight: bold;
+    }
+    .website-description{
+        padding: 8em 0 8em 1em;
+    }
+    .website-description > h1{
+        font-size: 2em;
+        font-weight: bolder;
+    }
+    .website-description > h4{
+        font-size: 1em;
+    }
+    /* About - Secound Section */
+    .secoundsection-about{
+        padding: 2em 1em;
+    }
+    .about-company > p{
+        font-size: 0.9em;
+    }
+    .about-company-img{
+        display: none;
+    }
+    /* About - Third Section */
+    .about-thirdsection{
+        display: flex;
+        flex-direction: column;
+        padding: 2em 0;
+    }
+    .ourvision{
+        padding: 0 1em;
+    }
+    .ourvision-img{
+        overflow-x:hidden;
+    }
+    .ourvision-img > img{
+        height: 105%;
+        width: 110%;
+        position: relative;
+        top: -4em;
+    }
+    .about-fourthsection{
+        padding: 1em;
+        margin: 1em 0;
+    }
+    .about-button{
+        padding: 1 1.5em;
+    }
+    /* Footer */
+    .footer{
+        padding: 0.5em;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footerhead > p{
+        font-size: 0.9em;
+    }
+    .footeremail, .footer-links, .footer-social{
+        padding: 0;
+        margin: 0;
+    }
+    .footer-links{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 2em 0 0 0;
+    }
+    .footer-contactus{
+        padding: 2em 0 0 0;
+    }
+    footer > p{
+        font-size: 0.9em;
+    }
+}

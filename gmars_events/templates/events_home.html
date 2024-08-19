@@ -1,0 +1,281 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home | Gmars Management PVT LTD</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static "/eduhub/images/favicon/apple-touch-icon.png" %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static "/eduhub/images/favicon/favicon-32x32.png" %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static "/eduhub/images/favicon/favicon-16x16.png" %}">
+    <link rel="manifest" href="{% static "/eduhub/images/favicon/site.webmanifest" %}">
+    <!-- style -->
+    <link rel="stylesheet" href="{% static "/events/css/events_home.css" %}">
+    <!-- Bootstrap Style -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Kameron:wght@400..700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <style>
+        .first-section{
+            background-image: url('{% static "/events/image/events_home1.jpg" %}');
+        }
+    </style>
+    <div class="navbar-desktop">
+        <ul>
+            <li><a href="{% url "events-home" %}">Home</a></li>
+            <li><a href="{% url "events-about" %}">About</a></li>
+            <li><a href="{% url "events-corporate" %}">Corporate Events</a></li>
+            <li><a href="{% url "events-cars" %}">Premium Cars</a></li>
+            <li><a href="{% url "events-contact" %}">Contact</a></li>
+        </ul>
+        <div class="mobile-nav">
+            <div class="links-mobile">
+                <div class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="5em" height="5em" viewBox="-5 -7 24 24"><path fill="white" d="M1 0h5a1 1 0 1 1 0 2H1a1 1 0 1 1 0-2m7 8h5a1 1 0 0 1 0 2H8a1 1 0 1 1 0-2M1 4h12a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2"/></svg>
+                </div>
+            </div>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="mobile-navs offcanvas-body menu-link-button-edu">
+                    <div><a href="{% url "events-home" %}"><span>Home</span></a></div>
+                    <div><a href="{% url "events-about" %}">About</a></div>
+                    <div><a href="{% url "events-corporate" %}">Corporate Events</a></div>
+                    <div><a href="{% url "events-cars" %}">Premium Cars</a></div>
+                    <div><a href="{% url "events-contact" %}">Contact</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="first-section">
+        <h1>Get An Unforgettable <br>
+            Event Experience With Us
+        </h1>
+        <h5>
+            Welcome To G-Mars Events Management <br>
+            Creating Memorable Events That Last a Lifetime
+        </h5>
+        <button type="button" class="btn btn-light" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Contact Us</button>
+    </div>
+    <div class="secound-section">
+        <img src="{% static "events/image/events_home2.jpg" %}" alt="">
+        <div class="secound-section-content">
+            <h2>Your Vision And
+                Our Expertise
+                The Perfect Partnership
+            </h2>
+            <p>Our creativity, attention to detail, and passion for planning will ensure that your next corporate event is a huge success. We take the time to get to know your organization - your mission, your goals, your vision, and we work with you to create an event that reflects your company brand.
+            </p>
+        </div>
+    </div>
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Let's Know You</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form name="submit-to-google-sheet">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Full Name</label>
+                            <input name="name" type="text" aria-label="full name" class="form-control">
+                        </div>
+                        <div class="mb-3">
+                            <label for="exampleInputEmail1" class="form-label">Email address</label>
+                            <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label">Phone</label>
+                            <input name="telephone" type="tel" id="phoneNumber" aria-label="phone number" class="form-control">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="submit" class="btn btn-primary btn-lg">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="third-section">
+        <div class="third-section-content">
+            <h1><b>About US</b></h1>
+            <p>We are dedicated to orchestrating seamless and 
+                unforgettable events that leave a lasting impression. 
+                With years of experience in the industry, our team 
+                brings together a wealth of expertise, creativity, and 
+                passion for event planning.
+            </p>
+            <p>
+                We understand that each event is unique, and we 
+                approach every project with meticulous attention to 
+                detail and a commitment to excellence. Whether it's a 
+                corporate gathering, a grand celebration, or a 
+                community event, we thrive on bringing our clients' 
+                visions to life
+            </p>
+            <a href="{% url "events-about" %}">
+                <button type="button" class="btn btn-dark">Know More</button>
+            </a>
+        </div>
+        <img src="{% static "/events/image/events_home3.jpg" %}" alt="">
+    </div>
+    <div class="third-btw-forth">
+        <img src="{% static "/events/image/events_home4.jpg" %}" alt="">
+    </div>
+    <div class="fourth-section">
+        <div class="fourth-section-part1">
+            <img src="{% static "/events/image/events_home5.jpg" %}" alt="">
+            <div class="fourth-section-part1-context">
+                <h3>Wedding Events</h3>
+                <h4>Menu planning, wedding coordination and management.</h4>
+                <p>Our team plays a crucial role in planning, coordinating, and executing weddings to ensure that they run smoothly and meet the expectations of the couple getting married. The team typically consists of various professionals with different roles and responsibilities.</p>
+            </div>
+        </div>
+        <div class="fourth-section-part2">
+            <div class="fourth-section-part2-context">
+                <h3>Special Occasions</h3>
+                <h4>Birthdays, engagements, and celebrations</h4>
+                <p>
+                    we specialize in turning your special occasions into unforgettable experiences. Whether you’re planning a milestone birthday celebration, a glamorous anniversary party, a whimsical baby shower, or any other momentous event, our dedicated team of event management experts is here to transform your vision into reality.
+                </p>
+            </div>
+            <img src="{% static "/events/image/events_home6.jpg" %}" alt="">
+        </div>
+        <div class="fourth-section-part3">
+            <img src="{% static "/events/image/events_home7.jpg" %}" alt="">
+            <div class="fourth-section-part3-context">
+                <h3>Corporate Events</h3>
+                <h4>Board room meetings, directors dining, product launches</h4>
+                <p>
+                    we are your trusted partner in orchestrating flawless and impactful corporate events that exceed your business objectives. Whether you’re planning a high-profile product launch, a dynamic conference, an engaging team-building retreat, or any corporate gathering, our expert event management team is here to bring your vision to life with precision and creativity.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="fifth-section">
+        <h2>Photo Gallery</h2>
+        <div class="fifth-section-gallery">
+            <div class="fifth-section-gallery-col1">
+                <img src="{% static "/events/image/events_home8.jpg" %}" alt="">
+            </div>
+            <div class="fifth-section-gallery-col2">
+                <div class="gallery-col2-row1">
+                    <img src="{% static "/events/image/events_home9.jpg" %}" alt="">
+                    <img src="{% static "/events/image/events_home10.jpg" %}" alt="">
+                </div>
+                <div class="gallery-col2-row2">
+                    <img src="{% static "/events/image/events_home11.jpg" %}" alt="">
+                </div>
+            </div>
+            <div class="fifth-section-gallery-col3">
+                <img src="{% static "/events/image/events_home12.jpg" %}" alt="">
+                <img src="{% static "/events/image/events_home13.jpg" %}" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="sixth-section">
+        <div class="sixth-section-col1">
+            <img src="{% static "/events/image/events_home14.jpg" %}" alt="">
+        </div>
+        <div class="sixth-section-col2">
+            <h2>Sign Up to Our Newsletter</h2>
+            <form name="submit-to-google-sheet-email">
+                <div class="sixth-section-input">
+                    {% csrf_token %}
+                    <input type="email" placeholder="Email" name="email">
+                    <button type="submit" class="btn btn-dark">Subscribe</button>
+                </div>
+            </form>
+        </div>
+        <div class="sixth-section-col3">
+            <img src="{% static "/events/image/events_home15.jpg" %}" alt="">
+        </div>
+    </div>
+    <footer>
+        <div class="footer-get-col1">
+            <ul>
+                <li><a href="https://maps.app.goo.gl/tSchuH1mkxvSeLEN7">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="1em" viewBox="0 0 24 24"><path fill="white" d="M12 21.325q-.35 0-.7-.125t-.625-.375Q9.05 19.325 7.8 17.9t-2.087-2.762t-1.275-2.575T4 10.2q0-3.75 2.413-5.975T12 2t5.588 2.225T20 10.2q0 1.125-.437 2.363t-1.275 2.575T16.2 17.9t-2.875 2.925q-.275.25-.625.375t-.7.125M12 12q.825 0 1.413-.587T14 10t-.587-1.412T12 8t-1.412.588T10 10t.588 1.413T12 12"/></svg>Main Road Calicut</a>
+                </li>
+                <li><a href="tel:+917593805052">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="1em" viewBox="0 0 24 24"><path fill="white" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02z"/></svg>+91 75938 05052
+                </a>
+                </li>
+                <li><a href="mailto:info@gmarspvt.in">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2.1em" height="1em" viewBox="0 0 24 24"><path fill="white" d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0l-8 5l-8-5zm0 12H4V8l8 5l8-5z"/></svg>info@gmarspvt.in</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-get-col2">
+            <p>Every special moment deserves to be celebrated. <br>
+                We help you to make it
+            </p>
+            <br>
+            <h5>Follow Us On</h5>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/gmarsclubwintogether">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="2em" viewBox="0 0 24 24"><path fill="white" d="M20.9 2H3.1A1.1 1.1 0 0 0 2 3.1v17.8A1.1 1.1 0 0 0 3.1 22h9.58v-7.75h-2.6v-3h2.6V9a3.64 3.64 0 0 1 3.88-4a20 20 0 0 1 2.33.12v2.7H17.3c-1.26 0-1.5.6-1.5 1.47v1.93h3l-.39 3H15.8V22h5.1a1.1 1.1 0 0 0 1.1-1.1V3.1A1.1 1.1 0 0 0 20.9 2"/></svg>
+                </a>
+                <a href="https://www.instagram.com/gmarsevents?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="2em" viewBox="0 0 24 24"><path fill="white" d="M13.028 2c1.125.003 1.696.009 2.189.023l.194.007c.224.008.445.018.712.03c1.064.05 1.79.218 2.427.465c.66.254 1.216.598 1.772 1.153a4.9 4.9 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.012.266.022.487.03.712l.006.194c.015.492.021 1.063.023 2.188l.001.746v1.31a79 79 0 0 1-.023 2.188l-.006.194c-.008.225-.018.446-.03.712c-.05 1.065-.22 1.79-.466 2.428a4.9 4.9 0 0 1-1.153 1.772a4.9 4.9 0 0 1-1.772 1.153c-.637.247-1.363.415-2.427.465l-.712.03l-.194.006c-.493.014-1.064.021-2.189.023l-.746.001h-1.309a78 78 0 0 1-2.189-.023l-.194-.006a63 63 0 0 1-.712-.031c-1.064-.05-1.79-.218-2.428-.465a4.9 4.9 0 0 1-1.771-1.153a4.9 4.9 0 0 1-1.154-1.772c-.247-.637-.415-1.363-.465-2.428l-.03-.712l-.005-.194A79 79 0 0 1 2 13.028v-2.056a79 79 0 0 1 .022-2.188l.007-.194c.008-.225.018-.446.03-.712c.05-1.065.218-1.79.465-2.428A4.9 4.9 0 0 1 3.68 3.678a4.9 4.9 0 0 1 1.77-1.153c.638-.247 1.363-.415 2.428-.465c.266-.012.488-.022.712-.03l.194-.006a79 79 0 0 1 2.188-.023zM12 7a5 5 0 1 0 0 10a5 5 0 0 0 0-10m0 2a3 3 0 1 1 .001 6a3 3 0 0 1 0-6m5.25-3.5a1.25 1.25 0 0 0 0 2.5a1.25 1.25 0 0 0 0-2.5"/></svg>
+                </a>
+                <a href="https://www.instagram.com/gmarsevents?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="2em" viewBox="0 0 448 512"><path fill="white" d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm297.1 84L257.3 234.6L379.4 396h-95.6L209 298.1L123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5l78.2-89.5zm-37.8 251.6L153.4 142.9h-28.3l171.8 224.7h26.3z"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-get-col3">
+            <ul>
+                <li><a href="{% url "events-home" %}">Home</a></li>
+                <li><a href="{% url "events-about" %}">About</a></li>
+                <li><a href="{% url "events-corporate" %}">Corporate Events</a></li>
+                <li><a href="{% url "events-cars" %}">Premium Cars</a></li>
+                <li><a href="{% url "events-contact" %}">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+        <!-- sheets Scripts --> 
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxCFJLgpIdBWlBn-NfXpICuYrzG3N5vl1wts9i1_aqx8au1O8BW3eTwuPP_jlThLEkUYw/exec'
+        const form = document.forms['submit-to-google-sheet']
+
+        form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+            console.log('Success!', response);
+            // Reload the page after successful data send
+            window.location.reload();
+            })
+            .catch(error => console.error('Error!', error.message));
+        });
+        //email
+        
+        const scriptURLSubs = 'https://script.google.com/macros/s/AKfycbw0pvIo98QgzsiKbboUvinvrP2eFtQTqst-dYHFbLVwFCRruv9HOw8t_bufnk7kKWiN/exec';
+        const formSubs = document.forms['submit-to-google-sheet-email'];
+
+        formSubs.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURLSubs, { method: 'POST', body: new FormData(formSubs) })
+            .then(response => {
+            console.log('Success!', response);
+            // Reload the page after successful data send
+            window.location.reload();
+            })
+            .catch(error => console.error('Error!', error.message));
+        });
+
+    </script>
+    <!-- Bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

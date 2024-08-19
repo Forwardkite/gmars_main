@@ -1,0 +1,83 @@
+/***********************************
+           CIRCULAR TEXT
+************************************/
+.rotater{
+    width:230px;
+    height:230px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,0.2);
+    position:relative;
+    align-items:center;
+    justify-content:Center;
+}
+
+.rotater img{
+    padding:0.5rem;
+    animation: 80s rotate infinite linear;
+    transition:0.5s;
+}
+
+.rotater figcaption{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    transition:0.5s;
+}
+
+.rotater:hover figcaption{
+    transform:translate(-50%, -50%) rotate(-180deg) scale(1.4);
+    color:var(--primary);
+}
+
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+@keyframes move-in {
+    0%{
+        left:50%;
+    }
+    
+    30%{
+        left:100%;
+    }
+    
+    50%{
+        left:50%;
+    }
+    
+    75%{
+        left:0%;
+    }
+    
+     100%{
+        left:50%;
+    }
+}
+
+
+
+@keyframes widen {
+    0%{
+        filter:blur(0);
+    }
+    
+    50%{
+        filter:blur(1.5px);
+    }
+    
+    100%{
+        filter:blur(0);
+    }
+}
+
+
+@keyframes align_text {
+    to{
+        transform:translate(-50%, -50%) scale(20);
+    }
+}

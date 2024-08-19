@@ -1,0 +1,205 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Contact | Gmars Management PVT LTD</title>
+        <link rel="apple-touch-icon" sizes="180x180" href="{% static "/eduhub/images/favicon/apple-touch-icon.png" %}">
+        <link rel="icon" type="image/png" sizes="32x32" href="{% static "/eduhub/images/favicon/favicon-32x32.png" %}">
+        <link rel="icon" type="image/png" sizes="16x16" href="{% static "/eduhub/images/favicon/favicon-16x16.png" %}">
+        <link rel="manifest" href="{% static "/eduhub/images/favicon/site.webmanifest" %}">
+        <!-- style -->
+         <link rel="stylesheet" href="{% static "/events/css/events_contact.css" %}">
+        <!-- Bootstrap Style -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <!-- google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Grey+Qo&family=Kameron:wght@400..700&display=swap" rel="stylesheet">
+    </head>
+<body>
+    <style>
+        .first-section{
+            background-image: url('{% static "/events/image/events_contact1.jpg" %}');
+        }
+    </style>
+    <div class="navbar-desktop">
+        <ul>
+            <li><a href="{% url "events-home" %}">Home</a></li>
+            <li><a href="{% url "events-about" %}">About</a></li>
+            <li><a href="{% url "events-corporate" %}">Corporate Events</a></li>
+            <li><a href="{% url "events-cars" %}">Premium Cars</a></li>
+            <li><a href="{% url "events-contact" %}">Contact</a></li>
+        </ul>
+        <div class="mobile-nav">
+            <div class="links-mobile">
+                <div class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="5em" height="5em" viewBox="-5 -7 24 24"><path fill="white" d="M1 0h5a1 1 0 1 1 0 2H1a1 1 0 1 1 0-2m7 8h5a1 1 0 0 1 0 2H8a1 1 0 1 1 0-2M1 4h12a1 1 0 0 1 0 2H1a1 1 0 1 1 0-2"/></svg>
+                </div>
+            </div>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                  <h5 class="offcanvas-title" id="offcanvasRightLabel"></h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="mobile-navs offcanvas-body menu-link-button-edu">
+                    <div><a href="{% url "events-home" %}"><span>Home</span></a></div>
+                    <div><a href="{% url "events-about" %}">About</a></div>
+                    <div><a href="{% url "events-corporate" %}">Corporate Events</a></div>
+                    <div><a href="{% url "events-cars" %}">Premium Cars</a></div>
+                    <div><a href="{% url "events-contact" %}">Contact</a></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="first-section">
+        <h1>Contact Us</h1>
+        <h4>Home > Contact Us</h4>
+    </div>
+    <div class="secound-section-heading">
+        <h2>Book Your Slots Here,</h2>
+    </div>
+    <div class="secound-section">
+        <div class="form-contact">
+            <form name="submit-to-google-sheet">
+                {% csrf_token %}
+                <div class="form-contact-sec">
+                  <label for="" class="form-label">Your Name</label>
+                  <input class="form-control" name="name">
+                </div>
+                <div class="form-contact-sec">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" name="email">
+                </div>
+                <div class="form-contact-sec">
+                    <label for="number" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" name="number">
+                </div>
+                <div class="form-floating form-contact-sec">
+                    <label for="floatingTextarea2"></label>
+                    <textarea class="form-control" id="floatingTextarea2" style="height: 100px" name="details"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary form-contact-sec">Send</button>
+            </form>
+        </div>
+        <div class="form-side">
+            <h1 class="mb-3">
+                We Are At Your Door Steps,
+            </h1>
+            <h5 class="mb-5">
+                Let's Talk about the Event
+            </h5>
+            <h5 class="mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><g fill="currentColor"><path d="M22 12A10.002 10.002 0 0 0 12 2v2a8.003 8.003 0 0 1 7.391 4.938A8 8 0 0 1 20 12zM2 10V5a1 1 0 0 1 1-1h5a1 1 0 0 1 1 1v4a1 1 0 0 1-1 1H6a8 8 0 0 0 8 8v-2a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1h-5C7.373 22 2 16.627 2 10"/><path d="M17.543 9.704A5.99 5.99 0 0 1 18 12h-1.8A4.199 4.199 0 0 0 12 7.8V6a6 6 0 0 1 5.543 3.704"/></g></svg>
+                 +91 9876 54321
+            </h5>
+            <h5 class="mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16"><path fill="currentColor" fill-rule="evenodd" d="M14.95 3.684L8.637 8.912a1 1 0 0 1-1.276 0l-6.31-5.228A.999.999 0 0 0 1 4v8a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4a.999.999 0 0 0-.05-.316M2 2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2m-.21 1l5.576 4.603a1 1 0 0 0 1.27.003L14.268 3z"/></svg>
+                info@gmarspvt.in
+            </h5>
+            <h5 class="mb-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 100 100"><path fill="currentColor" d="M50.001 0C33.65 0 20.25 13.36 20.25 29.666c0 6.318 2.018 12.19 5.433 17.016L46.37 82.445c2.897 3.785 4.823 3.066 7.232-.2l22.818-38.83c.46-.834.822-1.722 1.137-2.629a29.28 29.28 0 0 0 2.192-11.12C79.75 13.36 66.354 0 50.001 0m0 13.9c8.806 0 15.808 6.986 15.808 15.766c0 8.78-7.002 15.763-15.808 15.763c-8.805 0-15.81-6.982-15.81-15.763c0-8.78 7.005-15.765 15.81-15.765"/><path fill="currentColor" d="m68.913 48.908l-.048.126c.015-.038.027-.077.042-.115zM34.006 69.057C19.88 71.053 10 75.828 10 82.857C10 92.325 26.508 100 50 100s40-7.675 40-17.143c0-7.029-9.879-11.804-24.004-13.8l-1.957 3.332C74.685 73.866 82 76.97 82 80.572c0 5.05-14.327 9.143-32 9.143c-17.673 0-32-4.093-32-9.143c-.001-3.59 7.266-6.691 17.945-8.174c-.645-1.114-1.294-2.226-1.94-3.341" color="currentColor"/></svg>
+                 Main Road Calicut, 656703
+            </h5>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="sixth-section">
+        <div class="sixth-section-col1">
+            <img src="{% static "/events/image/events_home14.jpg" %}" alt="">
+        </div>
+        <div class="sixth-section-col2">
+            <h2>Sign Up to Our Newsletter</h2>
+            <form name="submit-to-google-sheet-email">
+                <div class="sixth-section-input">
+                    {% csrf_token %}
+                    <input type="email" placeholder="Email" name="email">
+                    <button type="submit" class="btn btn-dark">Subscribe</button>
+                </div>
+            </form>
+        </div>
+        <div class="sixth-section-col3">
+            <img src="{% static "/events/image/events_home15.jpg" %}" alt="">
+        </div>
+    </div>
+    <footer>
+        <div class="footer-get-col1">
+            <ul>
+                <li><a href="https://maps.app.goo.gl/tSchuH1mkxvSeLEN7">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="1em" viewBox="0 0 24 24"><path fill="white" d="M12 21.325q-.35 0-.7-.125t-.625-.375Q9.05 19.325 7.8 17.9t-2.087-2.762t-1.275-2.575T4 10.2q0-3.75 2.413-5.975T12 2t5.588 2.225T20 10.2q0 1.125-.437 2.363t-1.275 2.575T16.2 17.9t-2.875 2.925q-.275.25-.625.375t-.7.125M12 12q.825 0 1.413-.587T14 10t-.587-1.412T12 8t-1.412.588T10 10t.588 1.413T12 12"/></svg>Main Road Calicut</a>
+                </li>
+                <li><a href="tel:+917593805052">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2em" height="1em" viewBox="0 0 24 24"><path fill="white" d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24c1.12.37 2.33.57 3.57.57c.55 0 1 .45 1 1V20c0 .55-.45 1-1 1c-9.39 0-17-7.61-17-17c0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1c0 1.25.2 2.45.57 3.57c.11.35.03.74-.25 1.02z"/></svg>+91 75938 05052
+                </a>
+                </li>
+                <li><a href="mailto:info@gmarspvt.in">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="2.1em" height="1em" viewBox="0 0 24 24"><path fill="white" d="M22 6c0-1.1-.9-2-2-2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2zm-2 0l-8 5l-8-5zm0 12H4V8l8 5l8-5z"/></svg>info@gmarspvt.in</a>
+                </li>
+            </ul>
+        </div>
+        <div class="footer-get-col2">
+            <p>Every special moment deserves to be celebrated. <br>
+                We help you to make it
+            </p>
+            <br>
+            <h5>Follow Us On</h5>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/gmarsclubwintogether">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="2em" viewBox="0 0 24 24"><path fill="white" d="M20.9 2H3.1A1.1 1.1 0 0 0 2 3.1v17.8A1.1 1.1 0 0 0 3.1 22h9.58v-7.75h-2.6v-3h2.6V9a3.64 3.64 0 0 1 3.88-4a20 20 0 0 1 2.33.12v2.7H17.3c-1.26 0-1.5.6-1.5 1.47v1.93h3l-.39 3H15.8V22h5.1a1.1 1.1 0 0 0 1.1-1.1V3.1A1.1 1.1 0 0 0 20.9 2"/></svg>
+                </a>
+                <a href="https://www.instagram.com/gmarsevents?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="2em" viewBox="0 0 24 24"><path fill="white" d="M13.028 2c1.125.003 1.696.009 2.189.023l.194.007c.224.008.445.018.712.03c1.064.05 1.79.218 2.427.465c.66.254 1.216.598 1.772 1.153a4.9 4.9 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.012.266.022.487.03.712l.006.194c.015.492.021 1.063.023 2.188l.001.746v1.31a79 79 0 0 1-.023 2.188l-.006.194c-.008.225-.018.446-.03.712c-.05 1.065-.22 1.79-.466 2.428a4.9 4.9 0 0 1-1.153 1.772a4.9 4.9 0 0 1-1.772 1.153c-.637.247-1.363.415-2.427.465l-.712.03l-.194.006c-.493.014-1.064.021-2.189.023l-.746.001h-1.309a78 78 0 0 1-2.189-.023l-.194-.006a63 63 0 0 1-.712-.031c-1.064-.05-1.79-.218-2.428-.465a4.9 4.9 0 0 1-1.771-1.153a4.9 4.9 0 0 1-1.154-1.772c-.247-.637-.415-1.363-.465-2.428l-.03-.712l-.005-.194A79 79 0 0 1 2 13.028v-2.056a79 79 0 0 1 .022-2.188l.007-.194c.008-.225.018-.446.03-.712c.05-1.065.218-1.79.465-2.428A4.9 4.9 0 0 1 3.68 3.678a4.9 4.9 0 0 1 1.77-1.153c.638-.247 1.363-.415 2.428-.465c.266-.012.488-.022.712-.03l.194-.006a79 79 0 0 1 2.188-.023zM12 7a5 5 0 1 0 0 10a5 5 0 0 0 0-10m0 2a3 3 0 1 1 .001 6a3 3 0 0 1 0-6m5.25-3.5a1.25 1.25 0 0 0 0 2.5a1.25 1.25 0 0 0 0-2.5"/></svg>
+                </a>
+                <a href="https://www.instagram.com/gmarsevents?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="3em" height="2em" viewBox="0 0 448 512"><path fill="white" d="M64 32C28.7 32 0 60.7 0 96v320c0 35.3 28.7 64 64 64h320c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64zm297.1 84L257.3 234.6L379.4 396h-95.6L209 298.1L123.3 396H75.8l111-126.9L69.7 116h98l67.7 89.5l78.2-89.5zm-37.8 251.6L153.4 142.9h-28.3l171.8 224.7h26.3z"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-get-col3">
+            <ul>
+                <li><a href="{% url "events-home" %}">Home</a></li>
+                <li><a href="{% url "events-about" %}">About</a></li>
+                <li><a href="{% url "events-corporate" %}">Corporate Events</a></li>
+                <li><a href="{% url "events-cars" %}">Premium Cars</a></li>
+                <li><a href="{% url "events-contact" %}">Contact</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- sheets Scripts --> 
+    <script>
+        const scriptURLSubs = 'https://script.google.com/macros/s/AKfycbw0pvIo98QgzsiKbboUvinvrP2eFtQTqst-dYHFbLVwFCRruv9HOw8t_bufnk7kKWiN/exec';
+        const formSubs = document.forms['submit-to-google-sheet-email'];
+
+        formSubs.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURLSubs, { method: 'POST', body: new FormData(formSubs) })
+            .then(response => {
+            console.log('Success!', response);
+            // Reload the page after successful data send
+            window.location.reload();
+            })
+            .catch(error => console.error('Error!', error.message));
+        });
+
+        // contact Page
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxCFJLgpIdBWlBn-NfXpICuYrzG3N5vl1wts9i1_aqx8au1O8BW3eTwuPP_jlThLEkUYw/exec';
+        const form = document.forms['submit-to-google-sheet'];
+
+        form.addEventListener('submit', e => {
+        e.preventDefault();
+        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+            .then(response => {
+            console.log('Success!', response);
+            // Reload the page after successful data send
+            window.location.reload();
+            })
+            .catch(error => console.error('Error!', error.message));
+        });
+
+    </script>
+    <!-- Bootstrap script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>

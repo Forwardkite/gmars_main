@@ -1,0 +1,381 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+/* First Section */
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: start;
+    padding: 2em 0 2em 0;
+    margin: 0;
+}
+.logo{
+    padding: 0 0 0 2em;
+}
+.logo > a > img{
+    width: 110%;
+}
+.navbar-desktop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1% 1% 1% 25%;
+    font-weight:bolder;
+}
+.navbar-desktop > ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    list-style: none;
+}
+.navbar-desktop > ul > li{
+    font-size: larger;
+    padding: 0.7em 2em 0 2em;
+}
+.navbar-desktop > ul > li > a{
+    color: black;
+}
+.navbar-desktop > ul > li > a:hover{
+    color: #1158E1;
+}
+.login{
+    display: flex;
+    align-items: center;
+    font-size: larger;
+    padding: 0em 2em 0em 2em;
+    margin-left: 2em;
+    background-color: blue;
+    text-decoration: none;
+    color: white;
+}
+.login:hover{
+    background-color: rgb(0, 0, 100);
+    color: white;
+}
+.navbar-mobile{
+    display: none;
+}
+.website-description{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 7em 0 0 0;
+}
+.website-description > h4{
+    margin: 0;
+}
+.website-description > h1{
+    font-size: 2.5em;
+    padding: 0 0 0.2em 0;
+    font-weight: 600;
+}
+
+/* Fifth Section - Service Section*/
+.fifthsection{
+    background-color: #EBEFF9;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 10%;
+    padding: 4em;
+}
+.servdesc1{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: nowrap;
+    justify-content: end;
+    gap: 5%;
+}
+.ourservices > h5{
+    font-size: 1.5em;
+    color: #1158E1;
+}
+.ourservices > h2{
+    font-size: 3em;
+    font-weight: bold;
+    padding: 0 0 0.5em 0;
+}
+.ourservices > p{
+    font-size: 1.4em;
+}
+.singleservice{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 2em 0;
+    width: 20em;
+}
+.servicons > img{
+    height: 120%;
+}
+.servicons{
+    padding: 0 1em;
+}
+.serviconsdesc > h5{
+    font-size: 1.5em;
+    font-weight: bold;
+}
+/* .serviconsdesc > p{
+    width: 150%;
+} */
+/* Services - third section */
+.third-section{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: nowrap;
+    gap: 10%;
+    background: linear-gradient( 300deg, rgb(54, 106, 218), #C6C9D0);
+    margin: 0 0 4em 0;
+}
+/* .talentdesc-img{
+    width: fit-content;
+} */
+.talentdesc-img > img{
+    border-radius: 0 2em 0 0;
+    /* height: 100%; */
+}
+.talentdesc{
+    padding: 2em 0;
+}
+.talentdesc > h3{
+    font-weight: bold;
+}
+.talentdesc > p{
+    font-size: 1.3em;
+    padding: 1.2em 0 0 0;
+    color: white;
+}
+.serv-contactus{
+    background-color: #1158E1;
+    color: white;
+    width: fit-content;
+    padding: 0.7em;
+    border-radius: 0.5em;
+}
+/* footer */
+footer{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2em 2em;
+}
+footer > hr{
+    color: white;
+    background-color: white;
+    width: 75%;
+    height: 1.5px;
+}
+footer > p{
+    font-size: 1.2em;
+    color: grey;
+}
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 0 0 4em 0;
+}
+.footeremail{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 0 15em 0 0em;
+}
+.footerhead{
+    padding: 0 0 0 1.3em;
+}
+.footerhead > h4{
+    font-size: 2.5em;
+    font-weight: bold;
+    padding: 0 0 0.2em 0;
+}
+.footerhead > p{
+    font-size: 1.2em;
+    padding: 0 0 0.2em 0;
+}
+.emailaddress-input{
+    display: flex;
+    flex-direction: row;
+}
+.footer-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    padding: 1em 5em 0 0;
+}
+.footer-pages > ul{
+    padding: 1em 0 0 0;
+}
+.footer-pages > ul > li, a{
+    padding: 0.6em 0;
+}
+.footer-pages > ul > li > a{
+    font-size: 1.2em;
+    color: white;
+}
+.footer-contactus{
+    padding: 0 0 0 7em;
+}
+.footer-contactus > ul{
+    padding: 1em 0 0 0;
+}
+.footer-contactus > ul > li, a{
+    padding: 0.6em 0;
+}
+.footer-contactus > ul > li > a{
+    font-size: 1.2em;
+    color: white;
+}
+.footer-social{
+    padding: 0 0 0 5em;
+}
+.footer-social > svg{
+    margin: 0 0 0 2em;
+}
+@media only screen and (max-width: 740px) {
+    .navbar{
+        padding: 0;
+    }
+    .logo{
+        padding: 0.5em 0 0 0;
+        margin: 0;
+    }
+    .logo > a > img{
+        width: 110px;
+    }
+    .navbar-desktop{
+        display: none;
+    }
+    .navbar-mobile{
+        display: block;
+    }
+    .navbar-mobile{
+        padding: 4% 2% 0.5% 0.5%;
+    }
+    .mobile-links > ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        list-style: none;
+        padding: 0;
+    }
+    .mobile-links > ul > li{
+        padding: 2em 0 2em 0;
+    }
+    .mobile-links > ul > li > a{
+        text-decoration: none;
+        color: black;
+    }
+    .mobile-links > ul > li > a:hover{
+        color: #1158E1;
+        font-weight: bold;
+    }
+    .website-description{
+        padding: 8em 0 8em 1em;
+    }
+    .website-description > h1{
+        font-size: 2em;
+        font-weight: bolder;
+    }
+    .website-description > h4{
+        font-size: 1em;
+    }
+
+    /* fifth section */
+    .fifthsection{
+        padding: 4em 0 1em 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .ourservices{
+        padding: 1em;
+    }
+    .ourservices > h2{
+        font-size: 1.9em;
+    }
+    .ourservices > p{
+        font-size: 0.9em;
+        width: fit-content;
+    }
+    .singleservice{
+        padding: 2em 2em 0 0;
+    }
+    .servdesc1{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        padding: 0;
+    }
+    /* Service - Third Section */
+    .third-section{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        overflow-x: hidden;
+    }
+    .talentdesc-img >img{
+        width: 100%;
+        border-radius: 0;
+    }
+    .talentdesc{
+        padding: 2em 0 2em 1em;
+    }
+    .talentdesc > h3{
+        font-size: 1.5em;
+        overflow-x: hidden;
+    }
+    .talentdesc > p{
+        font-size: 0.9em;
+        padding: 0.9em 0 0 0;
+        color: white;
+    }
+    /* Footer */
+    .footer{
+        padding: 0.5em;
+    }
+    .footerhead > p{
+        font-size: 0.9em;
+    }
+    .footer{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footeremail, .footer-links, .footer-social{
+        padding: 0;
+        margin: 0;
+    }
+    .footer-links{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 2em 0 0 0;
+    }
+    .footer-contactus{
+        padding: 2em 0 0 0;
+    }
+    footer > p{
+        font-size: 0.9em;
+    }
+}

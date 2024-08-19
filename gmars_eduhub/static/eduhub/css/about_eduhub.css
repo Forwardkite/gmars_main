@@ -1,0 +1,357 @@
+/* Main Section */
+.main-eduhub{
+    background-size: cover;
+    padding: 0 0 5em 0;
+}
+.mobile-nav{
+    display: none;
+}
+.desktop-nav{
+    padding: 1% 0 0 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.nav-links{
+    flex-grow: 1;
+    align-items: center;
+    align-self: center;
+}
+.nav-links > ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 0 0 0 40%;
+}
+.nav-links > ul > li > a:hover{
+    color: #D05700;
+}
+.nav-links > ul > li > a{
+    font-weight: 500;
+    font-size: 1.6em;
+    color: black;
+    text-decoration: none;
+}
+.logo > img{
+    height: 7em;
+}
+.main-content{
+    padding: 10em 6em 2em 6em;
+}
+.main-content > h1{
+    font-size: 4em;
+}
+.main-content > p{
+    font-size: 2em;
+}
+
+/* Secound Sections */
+.secound-section{
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 4em 0;
+    gap: 6%;
+}
+.secound-sec1{
+    margin: 4% 4%;
+}
+.secound-sec2 > h1{
+    color: #D05700;
+    font-size: 3em;
+    margin: 0 0 0.5em 0;
+}
+.secound-sec2 > p{
+    font-size: 1.5em;
+    margin: 0 0 2em 0;
+}
+/* Third Section */
+.thirdsection-eduhub{
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 3%;
+    color: white;
+}
+.thirdsection-eduhub1{
+    width: 20%;
+}
+.thirdsection-eduhub2{
+    display: flex;
+    justify-content: end;
+    padding: 2em;
+}
+.thirdsection-eduhub2 > img{
+    width: 80%;
+}
+.part1 > h2{
+    font-size: 2.5em;
+}
+/* fourth-Section */
+.fourthsection-eduhub{
+    background-color: #EBE3DF;
+    padding: 1em 0em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.fourthsection-eduhub > h2{
+    font-size: 3em;
+}
+.fourthsection-eduhub2{
+    padding: 4em 2em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 4%;
+}
+.fourthsection-eduhub2 > p{
+    width: 40%;
+    font-size: 1.5em;
+}
+/* Before footer */
+.beforefooter-eduhub{
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 5em 4em;
+}
+.beforefooter-eduhub > h2{
+    font-size: 2.5em;
+}
+.beforefooter-eduhub > a{
+    text-decoration: none;
+    color: white;
+}
+.beforefooter-eduhub > a > div{
+    background-color: black;
+    font-size: 1.1em;
+    width: fit-content;
+    padding: 1em;
+    border-radius: 0.5em;
+}
+/* footer */
+footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+}
+.footer-global{
+    padding: 5em 2em;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-grow: 2;
+    justify-content: center;
+    align-items: start;
+    gap: 10%;
+}
+.logo-section{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+.logo-section > img{
+    display: block;
+    width: 50%;
+}
+.logo-section > p{
+    width: fit-content;
+    font-size: 1.2em;
+    margin: 1em 0;
+}
+.icons-socialmedia{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+.aboutus-footer > ul{
+    padding: 0;
+    width: fit-content;
+}
+.aboutus-footer > ul > li{
+    list-style: none;
+    padding: 0.5em 0;
+    width: 110%;
+    font-size: 1.2em;
+}
+.aboutus-footer > ul > li > a{
+    text-decoration: none;
+    color: white;
+}
+.aboutus-footer > ul {
+    width: 150%;
+    padding: 0;
+}
+.contactus-footer > ul{
+    width: 150%;
+    padding: 0;
+}
+.contactus-footer > ul > li{
+    width: fit-content;
+    list-style: none;
+    padding: 0.5em 0;
+    font-size: 1.2em;
+}
+.contactus-footer > ul > li > a{
+    text-decoration: none;
+    color: white;
+}
+.newsletter-footer{
+    padding: 0.5em 0;
+}
+.newsletter-footer > p{
+    font-size: 1.2em;
+    margin: 0 0 0.5em 0;
+}
+.newsletter-footer > form > input{
+    background-color: black;
+    color: white;
+    padding: 1em 2em;
+    border-radius: 0.5em;
+    border: 2px solid #D05700;
+}
+.footer-end{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer-end > hr{
+    width: 90%;
+}
+.footer-end > p{
+    padding: 1.5em 0;
+    font-size: 1.2em;
+}
+.menu-link-button-edu{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.menu-link-button-edu > div{
+    padding: 3em 0;
+}
+
+@media only screen and (max-width: 900px){
+    *{
+        overflow-x: hidden;
+    }
+    h1, h2, h3, h4, p{
+        overflow-y: hidden;
+    }
+
+    /* Navbar and First Image */
+    .desktop-nav{
+        display: none;
+    }
+    .mobile-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2em 1em;
+    }
+    .mobile-navs > div > a{
+        text-decoration: none;
+        font-size: 2em;
+        color: black;
+    }
+    .main-content{
+        padding: 1.5em 1.5em;
+        color: rgb(7, 7, 101);
+    }
+    .main-content > h1{
+        overflow-y: hidden;
+    }
+    .main-eduhub{
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 0;
+    }
+    /* Secound Section */
+    .secound-section{
+        display: flex;
+        flex-direction: column;
+        padding: 1em 0 0 0;
+    }
+    .secound-sec1 > img{
+        display: block;
+        width: 100%;
+        border-radius: 2em;
+    }
+    .secound-sec2{
+        padding: 2em;
+    }
+    .secound-sec2 > p{
+        font-size: 1.4em;
+    }
+    /* Third Section */
+    .thirdsection-eduhub{
+        justify-content: center;
+    }
+    .thirdsection-eduhub2{
+        display: none;
+    }
+    .thirdsection-eduhub1{
+        width: 80%;
+    }
+    /* Fourth Section  */
+    .fourthsection-eduhub2-img{
+        display: none;
+    }
+    .fourthsection-eduhub2 > p{
+        width: 100%;
+    }
+    .fourthsection-eduhub > h2{
+        padding-top: 1em;
+        font-size: 1.8em;
+    }
+    /* Footer */
+    .footer-global{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .logo-section{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .logo-section > p{
+        width: 100%;
+    }
+    .aboutus-footer > ul{
+        padding: 0 0 0 0.2em;
+    }
+    .contactus-footer > ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 0 0 0 0;
+    }
+    .newsletter-footer{
+        padding: 2em 0 0 0;
+    }
+
+    
+}
