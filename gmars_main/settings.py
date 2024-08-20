@@ -23,6 +23,7 @@ INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'whitenoise.runserver_nostatic',
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'gmars_group.apps.GmarsGroupConfig',
@@ -35,6 +36,7 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -83,10 +85,10 @@ WSGI_APPLICATION = 'gmars_main.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'gmars_demo',
-        'USER': os.environ.get('USER'),
-        'PASSWORD': os.environ.get('PASSWORD'),
-        'HOST': 'gmars-db-demo.c90wmk2a02go.ap-south-1.rds.amazonaws.com',
+        'NAME': 'gmarsdemodb',
+        'USER': os.environ.get('DB_USER'),
+        'PASSWORD': os.environ.get('DB_PASSWORD'),
+        'HOST': 'gmarsdemodb.c90wmk2a02go.ap-south-1.rds.amazonaws.com',
         'PORT': '5432',
     }
 }
@@ -124,7 +126,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 
 STATIC_URL = "/static/"
-STATICFILES_DIR = [BASE_DIR / "static"]
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # media files
 
