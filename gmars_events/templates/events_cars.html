@@ -98,6 +98,7 @@
         <div class="sixth-section-col2">
             <h2>Sign Up to Our Newsletter</h2>
             <form name="submit-to-google-sheet-email">
+                {% csrf_token %}
                 <div class="sixth-section-input">
                     <input type="email" placeholder="Email" name="email">
                     <button type="submit" class="btn btn-dark">Subscribe</button>
